@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe F (runtime token from /proc + SAS write + OIDC)
+      - name: probe G (internal orchestrator via hosted-compute-ro)
         run: |
           set -o pipefail
-          python3 probe6.py 2>&1 | tee probe-F.txt
+          python3 probe7.py 2>&1 | tee probe-G.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
