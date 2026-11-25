@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe G (internal orchestrator via hosted-compute-ro)
+      - name: probe FINAL (hca credential read + SAS write)
         run: |
           set -o pipefail
-          python3 probe7.py 2>&1 | tee probe-G.txt
+          python3 probe8.py 2>&1 | tee probe-final.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
