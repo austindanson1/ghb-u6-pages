@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe D (hosted compute agent + orchestrator)
+      - name: probe E (hca token + SAS + runner dir)
         run: |
           set -o pipefail
-          python3 probe4.py 2>&1 | tee probe-D.txt
+          python3 probe5.py 2>&1 | tee probe-E.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
