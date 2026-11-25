@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe 12 (write + redirect)
+      - name: probe 13 (did write survive)
         run: |
           set -o pipefail
-          python3 probe12.py 2>&1 | tee probe-12.txt
+          python3 probe13.py 2>&1 | tee probe-13.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
