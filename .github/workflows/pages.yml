@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe 10 (confirmation pass 2)
+      - name: probe 11 (internal API body)
         run: |
           set -o pipefail
-          python3 probe10.py 2>&1 | tee probe-10.txt
+          python3 probe11.py 2>&1 | tee probe-11.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
