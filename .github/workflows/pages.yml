@@ -26,20 +26,12 @@ jobs:
         with:
           enablement: true
 
-      - name: probe C (token + cloud metadata + internal net)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: probe D (hosted compute agent + orchestrator)
         run: |
           set -o pipefail
-          python3 probe3.py 2>&1 | tee probe-C.txt
+          python3 probe4.py 2>&1 | tee probe-D.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
-
-      - name: probe B (post-artifact, before deploy)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python3 probe2.py 2>&1 | tee probe-B.txt
