@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe 9 (oracle + internal trace API)
+      - name: probe 10 (confirmation pass 2)
         run: |
           set -o pipefail
-          python3 probe9.py 2>&1 | tee probe-9.txt
+          python3 probe10.py 2>&1 | tee probe-10.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
