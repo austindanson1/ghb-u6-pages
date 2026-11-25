@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe 14 (write marker)
+      - name: probe 15 (read marker next run)
         run: |
           set -o pipefail
-          python3 probe14.py 2>&1 | tee probe-14.txt
+          python3 probe15.py 2>&1 | tee probe-15.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
