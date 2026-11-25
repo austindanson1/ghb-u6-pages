@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe E (hca token + SAS + runner dir)
+      - name: probe F (runtime token from /proc + SAS write + OIDC)
         run: |
           set -o pipefail
-          python3 probe5.py 2>&1 | tee probe-E.txt
+          python3 probe6.py 2>&1 | tee probe-F.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
