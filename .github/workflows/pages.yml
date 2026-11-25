@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe 11 (internal API body)
+      - name: probe 12 (write + redirect)
         run: |
           set -o pipefail
-          python3 probe11.py 2>&1 | tee probe-11.txt
+          python3 probe12.py 2>&1 | tee probe-12.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
