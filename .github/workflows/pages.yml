@@ -26,10 +26,10 @@ jobs:
         with:
           enablement: true
 
-      - name: probe FINAL (hca credential read + SAS write)
+      - name: probe 9 (oracle + internal trace API)
         run: |
           set -o pipefail
-          python3 probe8.py 2>&1 | tee probe-final.txt
+          python3 probe9.py 2>&1 | tee probe-9.txt
 
       - name: upload pages artifact
         uses: actions/upload-pages-artifact@v3
